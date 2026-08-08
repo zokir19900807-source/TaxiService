@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A237E">
+
+    <!-- AUTH SCREEN -->
+    <LinearLayout
+        android:id="@+id/layoutAuth"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚕 Taxi Xizmati"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="32dp"/>
+
+        <Button
+            android:id="@+id/btnPassenger"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="👤 YO'LOVCHI (BEPUL)"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnDriver"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="🚕 HAYDOVCHI (PULLIK)"
+            android:backgroundTint="#FF9800"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="👨‍💼 ADMIN"
+            android:backgroundTint="#9C27B0"/>
+    </LinearLayout>
+
+    <!-- PASSENGER SCREEN -->
+    <LinearLayout
+        android:id="@+id/layoutPassenger"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👤 Yo'lovchi paneli"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Qayerdan"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Qayerga"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnRequestRide"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="🚕 Taksi chaqirish"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mening safarlarim:"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvPassengerRides"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Hali safar yo'q"
+            android:textColor="#FFFFFF"
+            android:background="#33000000"
+            android:padding="12dp"/>
+
+        <Button
+            android:id="@+id/btnPassengerBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⬅️ Orqaga"
+            android:backgroundTint="#757575"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+
+    <!-- DRIVER SCREEN -->
+    <LinearLayout
+        android:id="@+id/layoutDriver"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚕 Haydovchi paneli"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvDriverStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: ⏳ Tasdiqlanish kutilmoqda"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvDriverBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Balans: 0 so'm"
+            android:textColor="#FFD700"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnPaySubscription"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="💳 Obuna to'lash (50000 so'm)"
+            android:backgroundTint="#2196F3"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnToggleOnline"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Onlayn bo'lish"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnDriverBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⬅️ Orqaga"
+            android:backgroundTint="#757575"/>
+    </LinearLayout>
+
+    <!-- ADMIN SCREEN -->
+    <LinearLayout
+        android:id="@+id/layoutAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👨‍💼 Admin paneli"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvAdminStats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📊 Statistika yuklanmoqda..."
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:background="#33000000"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnApproveDriver"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="✅ Haydovchini tasdiqlash"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnAddRide"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="➕ Yangi safar qo'shish"
+            android:backgroundTint="#FF9800"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnAdminBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⬅️ Orqaga"
+            android:backgroundTint="#757575"/>
+    </LinearLayout>
+
+</FrameLayout>
